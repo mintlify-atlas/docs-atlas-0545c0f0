@@ -1,0 +1,155 @@
+{
+  "projectType": "saas",
+  "projectName": "WedTech Solutions",
+  "projectDescription": "A full-stack wedding technology platform for Indian destination wedding planners, combining a Wedding CRM for lead and vendor management with an RSVP platform for guest management, check-in, and communication.",
+  "theme": "almond",
+  "primaryColor": "#B8860B",
+  "lightColor": "#F5E6C8",
+  "darkColor": "#800020",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "architecture"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Wedding CRM",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "crm/overview",
+              "crm/setup",
+              "crm/authentication"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "crm/leads",
+              "crm/weddings",
+              "crm/vendors",
+              "crm/checklists",
+              "crm/client-portal"
+            ]
+          },
+          {
+            "group": "Data & Integrations",
+            "pages": [
+              "crm/data-library",
+              "crm/rsvp-integration",
+              "crm/webhooks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "RSVP Platform",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "rsvp/overview",
+              "rsvp/setup",
+              "rsvp/authentication"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "rsvp/weddings",
+              "rsvp/guests",
+              "rsvp/events",
+              "rsvp/seating",
+              "rsvp/accommodation"
+            ]
+          },
+          {
+            "group": "Guest Experience",
+            "pages": [
+              "rsvp/invitations",
+              "rsvp/check-in",
+              "rsvp/photo-wall",
+              "rsvp/display-screen"
+            ]
+          },
+          {
+            "group": "Communication",
+            "pages": [
+              "rsvp/messaging",
+              "rsvp/reminders",
+              "rsvp/analytics"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "RSVP API",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/weddings",
+              "api/guests",
+              "api/events",
+              "api/checkin",
+              "api/crm-integration"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api/webhooks"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Lead pipeline management with relationship manager assignment and follow-ups",
+    "Full wedding project management with multi-function event tracking",
+    "Vendor database with ratings, assignments, and follow-up scheduling",
+    "SOP-driven checklist engine with templates and per-wedding customization",
+    "Client portal with configurable access permissions",
+    "Guest RSVP management with tokenized invite links and per-event RSVP status",
+    "QR code and manual check-in for event-day attendance tracking",
+    "Multi-language digital invite templates (9 Indian languages supported)",
+    "Guest communication via WhatsApp, SMS, and Email with automated reminders",
+    "Seating chart management with zone-based table assignments",
+    "Accommodation room allocation for outstation guests",
+    "Photo wall with planner moderation and guest uploads",
+    "Live display screen with share tokens for event venues",
+    "CRM-RSVP integration with webhook-based real-time sync",
+    "Plan tiers (Free, Starter, Professional, Enterprise) with API key support"
+  ],
+  "publicApiSurface": [
+    "GET /api/weddings — List all weddings for authenticated planner",
+    "POST /api/weddings — Create a new wedding",
+    "GET /api/weddings/[weddingId] — Get wedding details",
+    "GET /api/weddings/[weddingId]/guests — List guests for a wedding",
+    "POST /api/weddings/[weddingId]/guests — Add a guest",
+    "GET /api/weddings/[weddingId]/events — List wedding events",
+    "POST /api/weddings/[weddingId]/events — Create a wedding event",
+    "GET /api/weddings/[weddingId]/seating — Get seating tables",
+    "GET /api/weddings/[weddingId]/accommodation — Get accommodation rooms",
+    "GET /api/weddings/[weddingId]/analytics — Get RSVP analytics",
+    "POST /api/checkin — Check in a guest at an event",
+    "GET /api/guests/[guestToken] — Get guest details by invite token",
+    "POST /api/crm/weddings/[id]/guests — CRM guest sync endpoint",
+    "GET /api/crm/weddings/[id]/headcounts — Get headcount summary",
+    "POST /api/crm/weddings/[id]/webhook — Webhook receiver for CRM notifications",
+    "POST /api/webhooks — RSVP change notification webhook"
+  ]
+}
